@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "src/data/categories.js", "src/data/recipes.js", "src/types/recipe.js", "src/components/Navbar.jsx"  ],
   "exclude": ["node_modules"]
 }
