@@ -57,7 +57,7 @@ const recipes = [
     cookTime: "10m",
     servings: 2,
     difficulty: "Easy",
-    heroImage: "/images/recipes/avocado-toast.jpg",
+    heroImage: "/images/recipes/avocado-toast.png",
     ingredients: {
       main: [
         "2 slices Sourdough bread",
@@ -93,7 +93,7 @@ const recipes = [
     cookTime: "5m",
     servings: 1,
     difficulty: "Easy",
-    heroImage: "/images/recipes/veggie-omelette.jpg",
+    heroImage: "/images/recipes/veggie-omelette.png",
     ingredients: {
       main: [
         "3 Large eggs",

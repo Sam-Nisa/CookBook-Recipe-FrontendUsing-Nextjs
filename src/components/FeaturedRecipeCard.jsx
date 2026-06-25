@@ -1,7 +1,13 @@
+"use client";
+
 import Link from "next/link";
+import { useFavorites } from "../app/context/FavoritesContext";
 
 export default function FeaturedRecipeCard({ recipe }) {
   if (!recipe) return null;
+
+  const { isFavorite, toggleFavorite } = useFavorites();
+  const isFav = isFavorite(recipe.id);
 
   // Generate initials from author name if not explicitly provided
   const getInitials = (name) => {
@@ -27,6 +33,31 @@ export default function FeaturedRecipeCard({ recipe }) {
         <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm text-[#9A621C] text-[10px] md:text-xs font-bold px-3 py-1.5 rounded shadow-sm tracking-wider uppercase">
           Editor's Pick
         </div>
+
+        {/* Heart Toggle Button */}
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleFavorite(recipe);
+          }}
+          className="absolute top-4 right-4 bg-white/80 hover:bg-white text-neutral-700 hover:text-red-500 p-2.5 rounded-full backdrop-blur-sm shadow-sm transition-all duration-300 active:scale-95 z-20 flex items-center justify-center"
+          aria-label={isFav ? "Remove from Favorites" : "Add to Favorites"}
+        >
+          <svg
+            className={`w-4.5 h-4.5 transition-colors ${
+              isFav ? "fill-red-500 stroke-red-500" : "fill-none stroke-current"
+            }`}
+            strokeWidth="2.2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+            />
+          </svg>
+        </button>
       </div>
 
       {/* Body Content */}

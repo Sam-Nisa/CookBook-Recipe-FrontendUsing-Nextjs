@@ -1,13 +1,20 @@
+"use client";
+
 import Link from "next/link";
 import recipes from "../data/recipes";
+import { useFavorites } from "../app/context/FavoritesContext";
 
 export default function Banner() {
   // Find the recipe with id: 1 and categoryId: 1
   const recipe = recipes.find((r) => r.id === 1 && r.categoryId === 1);
 
+  const { isFavorite, toggleFavorite } = useFavorites();
+
   if (!recipe) {
     return null;
   }
+
+  const isFav = isFavorite(recipe.id);
 
   // Parse prep and cook times to calculate total time (e.g. "10m" + "15m" -> 25)
   const parseTime = (timeStr) => {
@@ -36,7 +43,7 @@ export default function Banner() {
             </span>
 
             {/* Title */}
-            <h1 className="mt-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-white leading-[1.15] tracking-tight drop-shadow-md">
+            <h1 className="mt-4  text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-white leading-[1.15] tracking-tight drop-shadow-md">
               {recipe.title}
             </h1>
 
@@ -46,26 +53,50 @@ export default function Banner() {
             </p>
 
             {/* Stats and Action Row */}
-            <div className="mt-8 flex flex-wrap items-center gap-6 md:gap-8">
-              {/* Button */}
-              <Link
-                href={`/recipe/${recipe.id}`}
-                className="inline-flex items-center gap-2.5 bg-[#E07E1B] hover:bg-[#C97116] text-white text-sm font-semibold px-6 py-3.5 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-orange-500/10 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:scale-98"
-              >
-                {/* Crossed Fork and Spoon Icon */}
-                <svg
-                  className="w-4 h-4 fill-none stroke-current"
-                  viewBox="0 0 24 24"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+            <div className="mt-8 flex flex-wrap items-center gap-4 md:gap-6">
+              {/* Buttons Group */}
+              <div className="flex items-center gap-3">
+                <Link
+                  href={`/recipe/${recipe.id}`}
+                  className="inline-flex items-center gap-2.5 bg-[#E07E1B] hover:bg-[#C97116] text-white text-sm font-semibold px-6 py-3.5 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-orange-500/10 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:scale-98"
                 >
-                  <path d="M3 21l7-7m3.5-3.5L18 6a3 3 0 10-4.24-4.24l-4.5 4.5" />
-                  <path d="M21 3l-7 7m-1.5 1.5L8 16c-.5 1.5-2 3-5 5 2-3 3.5-4.5 5-5l2.25-2.25" />
-                  <path d="M18 6l2-2M15 9l2-2" />
-                </svg>
-                View Full Recipe
-              </Link>
+                  {/* Crossed Fork and Spoon Icon */}
+                  <svg
+                    className="w-4 h-4 fill-none stroke-current"
+                    viewBox="0 0 24 24"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M3 21l7-7m3.5-3.5L18 6a3 3 0 10-4.24-4.24l-4.5 4.5" />
+                    <path d="M21 3l-7 7m-1.5 1.5L8 16c-.5 1.5-2 3-5 5 2-3 3.5-4.5 5-5l2.25-2.25" />
+                    <path d="M18 6l2-2M15 9l2-2" />
+                  </svg>
+                  View Full Recipe
+                </Link>
+
+                <button
+                  onClick={() => toggleFavorite(recipe)}
+                  className={`inline-flex items-center justify-center p-3.5 rounded-2xl shadow-lg transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:scale-98 ${
+                    isFav
+                      ? "bg-red-500 text-white hover:bg-red-600 shadow-red-500/10"
+                      : "bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm"
+                  }`}
+                  aria-label={isFav ? "Remove from Favorites" : "Add to Favorites"}
+                >
+                  <svg
+                    className={`w-5 h-5 ${isFav ? "fill-current stroke-current" : "fill-none stroke-current"}`}
+                    strokeWidth="2.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                    />
+                  </svg>
+                </button>
+              </div>
 
               {/* Time Stat */}
               <div className="flex items-center gap-2 text-white/90 font-medium text-sm md:text-base">

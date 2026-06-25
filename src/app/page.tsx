@@ -1,7 +1,9 @@
+import Link from "next/link";
 import Banner from "../components/Banner";
 import Category from "../components/Category";
 import FeaturedRecipeCard from "../components/FeaturedRecipeCard";
 import RecipeCard from "../components/RecipeCard";
+import recipes from "../data/recipes";
 
 export default function Home() {
   const latestFeaturedRecipe = {
@@ -35,6 +37,11 @@ export default function Home() {
     },
   ];
 
+  // Get recommended recipes (id: 1, 2, 3) from recipes.js
+  const recommendedRecipes = recipes.filter(
+    (r) => r.id === 1 || r.id === 2 || r.id === 3
+  );
+
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
@@ -64,6 +71,36 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Recommended Section */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 border-t border-[#F0EAE1]">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#3C3224] tracking-tight">
+              Recipes You Might Also Like
+            </h2>
+            <p className="text-[#8E7E65] text-sm md:text-base mt-2 font-light">
+              More delicious breakfast favorites to try tonight.
+            </p>
+          </div>
+          <Link
+            href="/recipes"
+            className="text-sm font-semibold text-[#9A621C] hover:text-[#7A4D14] transition-colors flex items-center gap-1 group font-sans tracking-wide self-start sm:self-auto"
+          >
+            View All{" "}
+            <span className="transition-transform duration-200 group-hover:translate-x-1">
+              &rarr;
+            </span>
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {recommendedRecipes.map((recipe) => (
+            <RecipeCard key={recipe.id} recipe={recipe} />
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
+

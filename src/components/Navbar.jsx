@@ -3,11 +3,13 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useFavorites } from "../app/context/FavoritesContext";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const pathname = usePathname();
+  const { favorites } = useFavorites();
 
   if (pathname === "/login" || pathname === "/register") {
     return null;
@@ -17,6 +19,7 @@ export default function Navbar() {
     { label: "Home", href: "/" },
     { label: "Recipes", href: "/recipes" },
     { label: "Categories", href: "/categories" },
+    { label: "Favorites", href: "/favorites" },
   ];
 
   const handleSearchSubmit = (e) => {  
@@ -39,32 +42,34 @@ export default function Navbar() {
         
         {/* Brand Logo */}
         <div className="flex items-center flex-shrink-0">
-          <Link href="/" className="font-sans font-bold text-2xl text-[#9A621C] tracking-wide hover:opacity-90 transition-opacity">
+          <Link href="/" className="font-serif font-bold text-2xl text-[#9A621C] tracking-wide hover:opacity-90 transition-opacity">
             Modern Hearth
           </Link>
         </div>
 
         {/* Desktop Navigation Links */}
         <nav className="hidden lg:flex items-center gap-10">
-          {mainLinks.map((link) => {
-            const active = isActive(link.href);
-            return (
-              <Link
-                key={link.label}
-                href={link.href}
-                className={`text-[15px] font-semibold tracking-wide transition-colors duration-200 relative py-1.5 ${
-                  active
-                    ? "text-[#9A621C] after:absolute after:bottom-[-2px] after:left-0 after:right-0 after:h-[2px] after:bg-[#9A621C] after:rounded-full"
-                    : "text-[#6B5C4E] hover:text-[#9A621C]"
-                }`}
-              >
-                {link.label}
-              </Link>
-            );
-          })}
+          {mainLinks
+            .filter((link) => link.label !== "Favorites")
+            .map((link) => {
+              const active = isActive(link.href);
+              return (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className={`text-[15px] font-semibold tracking-wide transition-colors duration-200 relative py-1.5 flex items-center gap-1.5 ${
+                    active
+                      ? "text-[#9A621C] after:absolute after:bottom-[-2px] after:left-0 after:right-0 after:h-[2px] after:bg-[#9A621C] after:rounded-full"
+                      : "text-[#6B5C4E] hover:text-[#9A621C]"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
         </nav>
 
-        {/* Desktop Actions (Search & Login) */}
+        {/* Desktop Actions (Search, Favorites Icon, Login) */}
         <div className="hidden lg:flex items-center gap-5">
           {/* Search bar */}
           <form onSubmit={handleSearchSubmit} className="relative flex-grow max-w-[280px]">
@@ -91,6 +96,36 @@ export default function Navbar() {
               />
             </div>
           </form>
+
+          {/* Favorites Heart Icon */}
+          <Link
+            href="/favorites"
+            className={`relative p-2.5 rounded-xl transition-all duration-200 active:scale-95 flex items-center justify-center ${
+              isActive("/favorites")
+                ? "text-[#E07E1B] bg-[#F3EDE0]"
+                : "text-[#6B5C4E] hover:text-[#E07E1B] hover:bg-[#F3EDE0]"
+            }`}
+            aria-label="View Favorites"
+          >
+            <svg
+              className={`w-6 h-6 transition-colors ${
+                favorites.length > 0 ? "fill-[#E07E1B] stroke-[#E07E1B]" : "fill-none stroke-current"
+              }`}
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+              />
+            </svg>
+            {favorites.length > 0 && (
+              <span className="absolute -top-1 -right-1 bg-[#E07E1B] text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full min-w-[18px] text-center leading-none border-2 border-[#FAF8F5]">
+                {favorites.length}
+              </span>
+            )}
+          </Link>
 
           {/* Login Button */}
           <Link
@@ -195,11 +230,16 @@ export default function Navbar() {
                     key={link.label}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className={`text-base font-semibold transition-colors py-1 ${
+                    className={`text-base font-semibold transition-colors py-1 flex items-center gap-2 ${
                       active ? "text-[#9A621C]" : "text-[#6B5C4E] hover:text-[#9A621C]"
                     }`}
                   >
                     {link.label}
+                    {link.label === "Favorites" && favorites.length > 0 && (
+                      <span className="bg-[#E07E1B] text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full min-w-[18px] text-center leading-none">
+                        {favorites.length}
+                      </span>
+                    )}
                   </Link>
                 );
               })}
