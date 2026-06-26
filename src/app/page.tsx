@@ -49,7 +49,7 @@ export default function Home() {
       <div className="bg-white"><Category /> </div>
 
       {/* Latest Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 border-t border-[#F0EAE1]">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-1 py-12 md:py-16 border-t border-[#F0EAE1]">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#3C3224] tracking-tight">
             Latest From the Hearth
@@ -73,7 +73,7 @@ export default function Home() {
       </section>
 
       {/* Recommended Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 border-t border-[#F0EAE1]">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-1 py-12 md:py-16 border-t border-[#F0EAE1]">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
           <div>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#3C3224] tracking-tight">

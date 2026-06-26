@@ -10,7 +10,8 @@ export default function RecipeCard({ recipe }) {
   const isFav = isFavorite(recipe.id);
 
   return (
-    <article className="bg-[#FAF8F5] border border-[#F0EAE1] rounded-[24px] overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full group">
+    <article className="relative bg-[#FAF8F5] border border-[#F0EAE1] rounded-[24px] overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full group">
+      <Link href={`/recipe/${recipe.id}`} className="absolute inset-0 z-10" aria-label={`View ${recipe.title}`}></Link>
       {/* Image Container */}
       <div className="relative w-full aspect-[16/9] overflow-hidden">
         <div
@@ -53,9 +54,7 @@ export default function RecipeCard({ recipe }) {
 
         {/* Title */}
         <h3 className="mt-2 text-base md:text-lg font-serif font-bold text-[#3C3224] leading-snug hover:text-[#9A621C] transition-colors duration-200 flex-grow">
-          <Link href={`/recipe/${recipe.id}`}>
-            {recipe.title}
-          </Link>
+          {recipe.title}
         </h3>
 
         {/* Stats Row */}

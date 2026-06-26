@@ -252,14 +252,14 @@ export default function RegisterPage() {
             >
               I agree to the{" "}
               <Link
-                href="/terms"
+                href="/"
                 className="text-[#E07E1B] font-bold hover:underline"
               >
                 Terms of Service
               </Link>{" "}
               &{" "}
               <Link
-                href="/privacy"
+                href="/"
                 className="text-[#E07E1B] font-bold hover:underline"
               >
                 Privacy Policy

@@ -118,122 +118,10 @@ const recipes = [
     ],
     tags: ["Breakfast", "Vegetarian", "Healthy", "Quick"]
   },
-  {
-    id: 4,
-    categoryId: 1,
-    title: "Overnight Oats with Berries",
-    category: "Breakfast",
-    description: "A no-cook, make-ahead breakfast of creamy oats soaked overnight in milk and yogurt, topped with fresh berries and a drizzle of honey. Perfect for busy mornings.",
-    prepTime: "5m",
-    cookTime: "0m",
-    servings: 2,
-    difficulty: "Easy",
-    heroImage: "/images/recipes/overnight-oats.jpg",
-    ingredients: {
-      main: [
-        "150g Rolled oats",
-        "300ml Whole milk (or plant-based milk)",
-        "100g Greek yogurt",
-        "2 tbsp Honey",
-        "1 tsp Vanilla extract",
-        "1 cup Mixed berries",
-        "2 tbsp Chia seeds"
-      ]
-    },
-    chefNotes: [
-      "Let the oats sit for at least 6 hours, but overnight gives the best creamy texture.",
-      "Adjust the milk amount if you prefer a thinner or thicker consistency the next morning."
-    ],
-    nutrition: { calories: 340, protein: "13g", carbs: "52g", fat: "9g" },
-    steps: [
-      { stepNumber: 1, title: "Combine Ingredients", image: "/images/recipes/oats-step1.jpg", description: "In a jar or container, mix oats, milk, yogurt, honey, vanilla, and chia seeds until well combined." },
-      { stepNumber: 2, title: "Refrigerate Overnight", image: "/images/recipes/oats-step2.jpg", description: "Cover and refrigerate for at least 6 hours, or overnight, until the oats have softened.", timer_seconds: null },
-      { stepNumber: 3, title: "Top and Serve", image: "/images/recipes/oats-step3.jpg", description: "Stir the oats, top with fresh berries, and add an extra drizzle of honey before serving." }
-    ],
-    tags: ["Breakfast", "Healthy", "No-Cook", "Make-Ahead", "Vegetarian"]
-  },
-  {
-    id: 5,
-    categoryId: 1,
-    title: "French Toast with Cinnamon",
-    category: "Breakfast",
-    description: "Thick slices of brioche soaked in a cinnamon-vanilla custard, pan-fried until golden and crisp on the outside, soft and custardy within. A classic indulgent breakfast treat.",
-    prepTime: "10m",
-    cookTime: "10m",
-    servings: 4,
-    difficulty: "Easy",
-    heroImage: "/images/recipes/french-toast.jpg",
-    ingredients: {
-      main: [
-        "8 slices Brioche bread",
-        "4 Large eggs",
-        "200ml Whole milk",
-        "1 tsp Ground cinnamon",
-        "1 tsp Vanilla extract",
-        "2 tbsp Granulated sugar",
-        "30g Butter, for frying"
-      ],
-      toppings: [
-        "Maple syrup",
-        "Powdered sugar",
-        "Fresh strawberries"
-      ]
-    },
-    chefNotes: [
-      "Slightly stale bread works best as it absorbs the custard without falling apart.",
-      "Don't soak the bread too long — 20 seconds per side is enough to avoid sogginess."
-    ],
-    nutrition: { calories: 410, protein: "13g", carbs: "48g", fat: "18g" },
-    steps: [
-      { stepNumber: 1, title: "Make the Custard", image: "/images/recipes/french-toast-step1.jpg", description: "Whisk together eggs, milk, cinnamon, vanilla, and sugar in a shallow dish." },
-      { stepNumber: 2, title: "Soak the Bread", image: "/images/recipes/french-toast-step2.jpg", description: "Dip each slice of brioche into the custard for about 20 seconds per side, letting excess drip off." },
-      { stepNumber: 3, title: "Fry Until Golden", image: "/images/recipes/french-toast-step3.jpg", description: "Melt butter in a skillet over medium heat and cook each slice for 2–3 minutes per side until golden brown." },
-      { stepNumber: 4, title: "Serve", image: "/images/recipes/french-toast-step4.jpg", description: "Stack the slices, dust with powdered sugar, and serve with maple syrup and fresh strawberries." }
-    ],
-    tags: ["Breakfast", "Sweet", "Vegetarian", "Comfort Food"]
-  },
-  {
-    id: 6,
-    categoryId: 1,
-    title: "Breakfast Burrito",
-    category: "Breakfast",
-    description: "A hearty, portable breakfast wrapped in a warm flour tortilla, filled with scrambled eggs, crispy bacon, melted cheese, and salsa. Great for meal-prepping busy mornings.",
-    prepTime: "10m",
-    cookTime: "15m",
-    servings: 4,
-    difficulty: "Easy",
-    heroImage: "/images/recipes/breakfast-burrito.jpg",
-    ingredients: {
-      filling: [
-        "6 Large eggs",
-        "6 strips Bacon",
-        "1 cup Cheddar cheese, shredded",
-        "1 cup Hash browns, cooked",
-        "1/2 cup Salsa",
-        "1 tbsp Butter",
-        "Sea salt and black pepper, to taste"
-      ],
-      wrap: [
-        "4 Large flour tortillas"
-      ]
-    },
-    chefNotes: [
-      "Warm the tortillas briefly in a dry pan before filling — this makes them more pliable and prevents tearing.",
-      "These freeze well: wrap tightly in foil and reheat in the oven or microwave for a quick meal."
-    ],
-    nutrition: { calories: 480, protein: "24g", carbs: "38g", fat: "26g" },
-    steps: [
-      { stepNumber: 1, title: "Cook the Bacon", image: "/images/recipes/burrito-step1.jpg", description: "Cook bacon strips in a skillet until crisp. Remove, drain on paper towels, and crumble." },
-      { stepNumber: 2, title: "Scramble the Eggs", image: "/images/recipes/burrito-step2.jpg", description: "Melt butter in the same skillet, add beaten eggs, and scramble gently until just set." },
-      { stepNumber: 3, title: "Warm the Tortillas", image: "/images/recipes/burrito-step3.jpg", description: "Warm each tortilla in a dry pan for about 20 seconds per side." },
-      { stepNumber: 4, title: "Assemble and Roll", image: "/images/recipes/burrito-step4.jpg", description: "Layer scrambled eggs, hash browns, bacon, cheese, and salsa onto each tortilla. Fold in the sides and roll tightly into a burrito." }
-    ],
-    tags: ["Breakfast", "Hearty", "Meal-Prep", "Mexican-Inspired"]
-  },
 
   // ============ LUNCH (categoryId: 2) ============
   {
-    id: 7,
+    id: 4,
     categoryId: 2,
     title: "Classic Caesar Salad with Grilled Chicken",
     category: "Lunch",
@@ -242,7 +130,7 @@ const recipes = [
     cookTime: "15m",
     servings: 2,
     difficulty: "Easy",
-    heroImage: "/images/recipes/caesar-salad.jpg",
+    heroImage: "/images/recipes/caesar-salad.png",
     ingredients: {
       salad: [
         "2 heads Romaine lettuce, chopped",
@@ -275,7 +163,7 @@ const recipes = [
     tags: ["Lunch", "Salad", "High-Protein", "Quick"]
   },
   {
-    id: 8,
+    id: 5,
     categoryId: 2,
     title: "Classic Club Sandwich",
     category: "Lunch",
@@ -284,7 +172,7 @@ const recipes = [
     cookTime: "10m",
     servings: 2,
     difficulty: "Easy",
-    heroImage: "/images/recipes/club-sandwich.jpg",
+    heroImage: "/images/recipes/club-sandwich.png",
     ingredients: {
       main: [
         "6 slices White or sourdough bread",
@@ -310,7 +198,7 @@ const recipes = [
     tags: ["Lunch", "Sandwich", "Classic", "Quick"]
   },
   {
-    id: 9,
+    id: 6,
     categoryId: 2,
     title: "Tomato Basil Soup with Grilled Cheese",
     category: "Lunch",
@@ -319,7 +207,7 @@ const recipes = [
     cookTime: "35m",
     servings: 4,
     difficulty: "Easy",
-    heroImage: "/images/recipes/tomato-soup-grilled-cheese.jpg",
+    heroImage: "/images/recipes/tomato-soup-grilled-cheese.png",
     ingredients: {
       soup: [
         "1.2kg Ripe tomatoes, halved",
@@ -350,127 +238,10 @@ const recipes = [
     ],
     tags: ["Lunch", "Comfort Food", "Vegetarian", "Soup"]
   },
-  {
-    id: 10,
-    categoryId: 2,
-    title: "Chicken Caesar Wrap",
-    category: "Lunch",
-    description: "All the flavors of a Caesar salad rolled into a portable wrap. Grilled chicken, crisp romaine, parmesan, and creamy dressing wrapped in a soft tortilla — ideal for lunch on the go.",
-    prepTime: "15m",
-    cookTime: "10m",
-    servings: 2,
-    difficulty: "Easy",
-    heroImage: "/images/recipes/chicken-caesar-wrap.jpg",
-    ingredients: {
-      main: [
-        "2 Large flour tortillas",
-        "1 Chicken breast, grilled and sliced",
-        "1 cup Romaine lettuce, shredded",
-        "30g Parmesan cheese, shaved",
-        "3 tbsp Caesar dressing",
-        "1/4 cup Croutons, crushed"
-      ]
-    },
-    chefNotes: [
-      "Warm the tortillas slightly before rolling to prevent cracking.",
-      "Roll tightly and wrap in parchment paper to hold the shape if eating on the go."
-    ],
-    nutrition: { calories: 390, protein: "29g", carbs: "30g", fat: "17g" },
-    steps: [
-      { stepNumber: 1, title: "Grill the Chicken", image: "/images/recipes/wrap-step1.jpg", description: "Season and grill the chicken breast for 6–7 minutes per side until cooked through, then slice thinly." },
-      { stepNumber: 2, title: "Assemble the Filling", image: "/images/recipes/wrap-step2.jpg", description: "Toss the romaine lettuce with Caesar dressing and crushed croutons in a bowl." },
-      { stepNumber: 3, title: "Fill the Tortilla", image: "/images/recipes/wrap-step3.jpg", description: "Lay the tortilla flat, layer the dressed lettuce, sliced chicken, and shaved parmesan in the center." },
-      { stepNumber: 4, title: "Roll and Serve", image: "/images/recipes/wrap-step4.jpg", description: "Fold in the sides and roll tightly into a wrap. Slice in half and serve immediately." }
-    ],
-    tags: ["Lunch", "Wrap", "Quick", "High-Protein"]
-  },
-  {
-    id: 11,
-    categoryId: 2,
-    title: "Quinoa Buddha Bowl",
-    category: "Lunch",
-    description: "A vibrant, nutrient-packed bowl of fluffy quinoa, roasted sweet potato, chickpeas, and fresh vegetables, finished with a tangy tahini dressing. A wholesome plant-based lunch.",
-    prepTime: "15m",
-    cookTime: "25m",
-    servings: 2,
-    difficulty: "Easy",
-    heroImage: "/images/recipes/quinoa-buddha-bowl.jpg",
-    ingredients: {
-      bowl: [
-        "150g Quinoa, uncooked",
-        "1 Sweet potato, cubed",
-        "1 can Chickpeas, drained and rinsed",
-        "1 cup Baby spinach",
-        "1/2 Cucumber, diced",
-        "1 Avocado, sliced",
-        "2 tbsp Olive oil"
-      ],
-      dressing: [
-        "3 tbsp Tahini",
-        "1 Lemon, juiced",
-        "1 Garlic clove, minced",
-        "2–3 tbsp Water, to thin"
-      ]
-    },
-    chefNotes: [
-      "Roast the chickpeas alongside the sweet potato for extra crunch and flavor.",
-      "Thin the tahini dressing gradually with water until it reaches a pourable consistency."
-    ],
-    nutrition: { calories: 460, protein: "16g", carbs: "54g", fat: "22g" },
-    steps: [
-      { stepNumber: 1, title: "Cook the Quinoa", image: "/images/recipes/buddha-step1.jpg", description: "Rinse quinoa and cook in salted water according to package instructions, about 15 minutes, then fluff with a fork." },
-      { stepNumber: 2, title: "Roast the Vegetables", image: "/images/recipes/buddha-step2.jpg", description: "Toss sweet potato and chickpeas with olive oil, salt, and pepper, and roast at 200°C (400°F) for 20–25 minutes until golden." },
-      { stepNumber: 3, title: "Make the Dressing", image: "/images/recipes/buddha-step3.jpg", description: "Whisk tahini, lemon juice, and garlic together, adding water gradually until smooth and pourable." },
-      { stepNumber: 4, title: "Assemble the Bowl", image: "/images/recipes/buddha-step4.jpg", description: "Divide quinoa between bowls, top with roasted vegetables, spinach, cucumber, and avocado, then drizzle with tahini dressing." }
-    ],
-    tags: ["Lunch", "Vegan", "Healthy", "Plant-Based"]
-  },
-  {
-    id: 12,
-    categoryId: 2,
-    title: "Shrimp & Avocado Summer Rolls",
-    category: "Lunch",
-    description: "Light, fresh Vietnamese-style rice paper rolls filled with poached shrimp, crisp vegetables, herbs, and creamy avocado, served with a savory peanut dipping sauce.",
-    prepTime: "25m",
-    cookTime: "5m",
-    servings: 4,
-    difficulty: "Intermediate",
-    heroImage: "/images/recipes/summer-rolls.jpg",
-    ingredients: {
-      rolls: [
-        "12 Rice paper wrappers",
-        "300g Shrimp, peeled and cooked",
-        "1 Avocado, sliced",
-        "1 Carrot, julienned",
-        "1/2 Cucumber, julienned",
-        "1 cup Rice vermicelli noodles, cooked",
-        "Fresh mint and cilantro leaves"
-      ],
-      dippingSauce: [
-        "3 tbsp Peanut butter",
-        "1 tbsp Soy sauce",
-        "1 tbsp Rice vinegar",
-        "1 tsp Honey",
-        "2–3 tbsp Water, to thin"
-      ]
-    },
-    chefNotes: [
-      "Dip the rice paper in warm water for just 5–10 seconds — it will continue to soften as you fill and roll it.",
-      "Work on a damp cutting board to prevent the wrapper from sticking while rolling."
-    ],
-    nutrition: { calories: 290, protein: "18g", carbs: "32g", fat: "10g" },
-    steps: [
-      { stepNumber: 1, title: "Prep the Fillings", image: "/images/recipes/rolls-step1.jpg", description: "Arrange the cooked shrimp, avocado, carrot, cucumber, noodles, and herbs near your workspace." },
-      { stepNumber: 2, title: "Soften the Wrapper", image: "/images/recipes/rolls-step2.jpg", description: "Dip a rice paper wrapper in warm water for 5–10 seconds until just pliable, then lay flat on a damp surface." },
-      { stepNumber: 3, title: "Fill and Roll", image: "/images/recipes/rolls-step3.jpg", description: "Layer a small amount of each filling near the bottom third of the wrapper, fold the sides in, and roll tightly away from you." },
-      { stepNumber: 4, title: "Make the Sauce and Serve", image: "/images/recipes/rolls-step4.jpg", description: "Whisk together peanut butter, soy sauce, rice vinegar, and honey, thinning with water as needed. Serve alongside the rolls." }
-    ],
-    tags: ["Lunch", "Vietnamese", "Light", "Seafood", "Fresh"]
-  },
 
   // ============ DINNER (categoryId: 3) ============
   {
-    id: 13,
+    id: 7,
     categoryId: 3,
     title: "Classic Margherita Pizza",
     category: "Dinner",
@@ -479,7 +250,7 @@ const recipes = [
     cookTime: "8m",
     servings: 4,
     difficulty: "Intermediate",
-    heroImage: "/images/recipes/margherita-pizza.jpg",
+    heroImage: "/images/recipes/margherita-pizza.png",
     ingredients: {
       dough: [
         "500g 00 Flour (high protein)",
@@ -508,7 +279,7 @@ const recipes = [
     tags: ["Italian", "Pizza", "Vegetarian", "Dinner", "Classic"]
   },
   {
-    id: 14,
+    id: 8,
     categoryId: 3,
     title: "Spaghetti alla Carbonara",
     category: "Dinner",
@@ -517,7 +288,7 @@ const recipes = [
     cookTime: "20m",
     servings: 4,
     difficulty: "Intermediate",
-    heroImage: "/images/recipes/carbonara.jpg",
+    heroImage: "/images/recipes/carbonara.png",
     ingredients: {
       main: [
         "400g Spaghetti",
@@ -542,7 +313,7 @@ const recipes = [
     tags: ["Italian", "Pasta", "Dinner", "Classic"]
   },
   {
-    id: 15,
+    id: 9,
     categoryId: 3,
     title: "Beef and Vegetable Stir-Fry",
     category: "Dinner",
@@ -551,7 +322,7 @@ const recipes = [
     cookTime: "10m",
     servings: 4,
     difficulty: "Easy",
-    heroImage: "/images/recipes/beef-stir-fry.jpg",
+    heroImage: "/images/recipes/beef-stir-fry.png",
     ingredients: {
       main: [
         "500g Beef sirloin, thinly sliced",
@@ -583,136 +354,10 @@ const recipes = [
     ],
     tags: ["Dinner", "Asian-Inspired", "Quick", "High-Protein"]
   },
-  {
-    id: 16,
-    categoryId: 3,
-    title: "Grilled Salmon with Asparagus",
-    category: "Dinner",
-    description: "Flaky, perfectly grilled salmon fillets with a bright lemon-herb glaze, served alongside crisp-tender asparagus. A light, elegant dinner that's as healthy as it is delicious.",
-    prepTime: "10m",
-    cookTime: "15m",
-    servings: 2,
-    difficulty: "Easy",
-    heroImage: "/images/recipes/grilled-salmon.jpg",
-    ingredients: {
-      main: [
-        "2 Salmon fillets (180g each)",
-        "1 bunch Asparagus, trimmed",
-        "2 tbsp Olive oil",
-        "1 Lemon, half juiced, half sliced",
-        "2 Garlic cloves, minced",
-        "1 tbsp Fresh dill, chopped",
-        "Sea salt and black pepper, to taste"
-      ]
-    },
-    chefNotes: [
-      "Pat the salmon fillets dry before grilling to achieve a better sear and prevent steaming.",
-      "Salmon is done when it flakes easily with a fork and reaches an internal temperature of about 52–54°C (125–130°F) for medium."
-    ],
-    nutrition: { calories: 380, protein: "34g", carbs: "8g", fat: "23g" },
-    steps: [
-      { stepNumber: 1, title: "Marinate the Salmon", image: "/images/recipes/salmon-step1.jpg", description: "Combine olive oil, lemon juice, garlic, and dill. Brush over the salmon fillets and let sit for 10 minutes." },
-      { stepNumber: 2, title: "Prep the Asparagus", image: "/images/recipes/salmon-step2.jpg", description: "Toss the asparagus with a little olive oil, salt, and pepper." },
-      { stepNumber: 3, title: "Grill", image: "/images/recipes/salmon-step3.jpg", description: "Grill the salmon skin-side down over medium-high heat for 5–6 minutes per side. Grill the asparagus alongside for 4–5 minutes, turning occasionally." },
-      { stepNumber: 4, title: "Serve", image: "/images/recipes/salmon-step4.jpg", description: "Plate the salmon and asparagus together, and finish with fresh lemon slices and a sprinkle of dill." }
-    ],
-    tags: ["Dinner", "Seafood", "Healthy", "Gluten-Free"]
-  },
-  {
-    id: 17,
-    categoryId: 3,
-    title: "Chicken Tikka Masala",
-    category: "Dinner",
-    description: "Tender marinated chicken simmered in a rich, spiced tomato-cream sauce. This beloved Indian-British dish delivers deep flavor with warm spices like garam masala and cumin.",
-    prepTime: "30m (plus marinating)",
-    cookTime: "30m",
-    servings: 4,
-    difficulty: "Intermediate",
-    heroImage: "/images/recipes/chicken-tikka-masala.jpg",
-    ingredients: {
-      marinade: [
-        "600g Boneless chicken thighs, cubed",
-        "150g Plain yogurt",
-        "1 tbsp Lemon juice",
-        "1 tbsp Garam masala",
-        "1 tsp Ground turmeric",
-        "1 tsp Ground cumin"
-      ],
-      sauce: [
-        "2 tbsp Ghee (or butter)",
-        "1 Onion, finely diced",
-        "4 Garlic cloves, minced",
-        "1 tbsp Fresh ginger, grated",
-        "400g Crushed tomatoes",
-        "200ml Heavy cream",
-        "1 tbsp Garam masala",
-        "Fresh cilantro, chopped"
-      ]
-    },
-    chefNotes: [
-      "Marinate the chicken for at least 2 hours, or overnight, for the deepest flavor.",
-      "For a smoky char, sear the marinated chicken in a very hot pan before adding it to the sauce."
-    ],
-    nutrition: { calories: 460, protein: "34g", carbs: "16g", fat: "29g" },
-    steps: [
-      { stepNumber: 1, title: "Marinate the Chicken", image: "/images/recipes/tikka-step1.jpg", description: "Combine yogurt, lemon juice, and spices in a bowl. Add the chicken, coat well, cover, and marinate in the fridge for at least 2 hours." },
-      { stepNumber: 2, title: "Sear the Chicken", image: "/images/recipes/tikka-step2.jpg", description: "Heat a pan over high heat and sear the marinated chicken pieces for 2–3 minutes per side until charred at the edges. Set aside." },
-      { stepNumber: 3, title: "Build the Sauce", image: "/images/recipes/tikka-step3.jpg", description: "In the same pan, melt ghee and sauté onion, garlic, and ginger until softened. Add crushed tomatoes and garam masala, and simmer for 10 minutes." },
-      { stepNumber: 4, title: "Simmer and Finish", image: "/images/recipes/tikka-step4.jpg", description: "Stir in the cream and return the chicken to the sauce. Simmer for 10–15 minutes until the chicken is cooked through and the sauce has thickened. Garnish with cilantro and serve with rice or naan." }
-    ],
-    tags: ["Dinner", "Indian", "Spicy", "Comfort Food"]
-  },
-  {
-    id: 18,
-    categoryId: 3,
-    title: "Classic Beef Lasagna",
-    category: "Dinner",
-    description: "Layers of tender pasta, rich beef ragù, creamy béchamel, and melted cheese baked until golden and bubbling. A hearty, crowd-pleasing centerpiece for any dinner table.",
-    prepTime: "30m",
-    cookTime: "50m",
-    servings: 6,
-    difficulty: "Intermediate",
-    heroImage: "/images/recipes/beef-lasagna.jpg",
-    ingredients: {
-      ragu: [
-        "500g Ground beef",
-        "1 Onion, diced",
-        "2 Carrots, diced",
-        "2 Celery stalks, diced",
-        "3 Garlic cloves, minced",
-        "700g Crushed tomatoes",
-        "2 tbsp Tomato paste",
-        "1 tsp Dried oregano"
-      ],
-      bechamel: [
-        "50g Butter",
-        "50g All-purpose flour",
-        "600ml Whole milk",
-        "Pinch Nutmeg"
-      ],
-      assembly: [
-        "12 Lasagna sheets",
-        "300g Mozzarella cheese, shredded",
-        "80g Parmesan cheese, grated"
-      ]
-    },
-    chefNotes: [
-      "Let the ragù simmer low and slow for at least 30 minutes to develop deep flavor — longer is even better.",
-      "Let the assembled lasagna rest for 10–15 minutes after baking so it holds its shape when sliced."
-    ],
-    nutrition: { calories: 540, protein: "30g", carbs: "42g", fat: "27g" },
-    steps: [
-      { stepNumber: 1, title: "Make the Ragù", image: "/images/recipes/lasagna-step1.jpg", description: "Brown the ground beef with onion, carrot, celery, and garlic. Add crushed tomatoes, tomato paste, and oregano, and simmer for 30 minutes." },
-      { stepNumber: 2, title: "Make the Béchamel", image: "/images/recipes/lasagna-step2.jpg", description: "Melt butter, whisk in flour, and cook for 1 minute. Gradually whisk in milk and simmer until thickened. Season with nutmeg, salt, and pepper." },
-      { stepNumber: 3, title: "Layer the Lasagna", image: "/images/recipes/lasagna-step3.jpg", description: "In a baking dish, layer pasta sheets, ragù, béchamel, and mozzarella, repeating until all ingredients are used. Top with parmesan." },
-      { stepNumber: 4, title: "Bake", image: "/images/recipes/lasagna-step4.jpg", description: "Bake at 190°C (375°F) for 40–45 minutes until golden and bubbling. Rest for 10–15 minutes before slicing and serving." }
-    ],
-    tags: ["Italian", "Dinner", "Comfort Food", "Family-Style"]
-  },
 
   // ============ DESSERT (categoryId: 4) ============
   {
-    id: 19,
+    id: 10,
     categoryId: 4,
     title: "Classic Tiramisu",
     category: "Dessert",
@@ -721,7 +366,7 @@ const recipes = [
     cookTime: "0m",
     servings: 8,
     difficulty: "Intermediate",
-    heroImage: "/images/recipes/tiramisu.jpg",
+    heroImage: "/images/recipes/tiramisu.png",
     ingredients: {
       main: [
         "6 Large egg yolks",
@@ -747,7 +392,7 @@ const recipes = [
     tags: ["Dessert", "Italian", "No-Bake", "Make-Ahead"]
   },
   {
-    id: 20,
+    id: 11,
     categoryId: 4,
     title: "Molten Chocolate Lava Cake",
     category: "Dessert",
@@ -756,7 +401,7 @@ const recipes = [
     cookTime: "12m",
     servings: 4,
     difficulty: "Easy",
-    heroImage: "/images/recipes/lava-cake.jpg",
+    heroImage: "/images/recipes/lava-cake.png",
     ingredients: {
       main: [
         "115g Dark chocolate, chopped",
@@ -782,7 +427,7 @@ const recipes = [
     tags: ["Dessert", "Chocolate", "Quick", "Indulgent"]
   },
   {
-    id: 21,
+    id: 12,
     categoryId: 4,
     title: "New York Style Cheesecake",
     category: "Dessert",
@@ -791,7 +436,7 @@ const recipes = [
     cookTime: "1h 10m",
     servings: 10,
     difficulty: "Intermediate",
-    heroImage: "/images/recipes/cheesecake.jpg",
+    heroImage: "/images/recipes/cheesecake.png",
     ingredients: {
       crust: [
         "200g Graham crackers, crushed",
@@ -821,116 +466,104 @@ const recipes = [
     tags: ["Dessert", "Baked", "Classic", "Make-Ahead"]
   },
   {
-    id: 22,
-    categoryId: 4,
-    title: "Warm Apple Crumble",
-    category: "Dessert",
-    description: "Tender, spiced baked apples topped with a buttery, golden oat crumble. A cozy, rustic dessert that's best served warm with a scoop of vanilla ice cream.",
+    id: 101,
+    categoryId: 1,
+    title: "Matcha Green Tea Pancakes",
+    category: "Breakfast",
+    description: "Vibrant and fluffy matcha pancakes that bring a subtle earthy sweetness to your morning. Topped with fresh berries and a drizzle of honey.",
+    prepTime: "10m",
+    cookTime: "15m",
+    servings: 2,
+    difficulty: "Easy",
+    heroImage: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=1200&q=80",
+    ingredients: {
+      batter: [
+        "150g All-purpose flour",
+        "1 tbsp Matcha powder",
+        "2 tbsp Sugar",
+        "1 tsp Baking powder",
+        "1 Large egg",
+        "200ml Milk"
+      ]
+    },
+    chefNotes: [
+      "Use ceremonial grade matcha for the best color and flavor."
+    ],
+    nutrition: { calories: 310, protein: "8g", carbs: "45g", fat: "10g" },
+    steps: [
+      { stepNumber: 1, title: "Mix", description: "Whisk dry ingredients, then fold in wet ingredients." },
+      { stepNumber: 2, title: "Cook", description: "Cook on a buttered skillet until bubbles form, then flip." }
+    ],
+    tags: ["Breakfast", "Vegetarian", "Quick"]
+  },
+  {
+    id: 102,
+    categoryId: 2,
+    title: "Quinoa Power Salad Bowl",
+    category: "Lunch",
+    description: "A nutrient-packed bowl loaded with fluffy quinoa, roasted sweet potatoes, fresh greens, and a tangy lemon-tahini dressing.",
     prepTime: "15m",
-    cookTime: "35m",
-    servings: 6,
+    cookTime: "25m",
+    servings: 2,
     difficulty: "Easy",
-    heroImage: "/images/recipes/apple-crumble.jpg",
+    heroImage: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80",
     ingredients: {
-      filling: [
-        "6 Apples, peeled and sliced",
-        "2 tbsp Lemon juice",
-        "60g Brown sugar",
-        "1 tsp Ground cinnamon",
-        "1 tbsp All-purpose flour"
+      salad: [
+        "1 cup Cooked quinoa",
+        "1 Sweet potato, cubed and roasted",
+        "2 cups Mixed greens",
+        "1/4 cup Pumpkin seeds"
       ],
-      crumble: [
-        "120g All-purpose flour",
-        "100g Rolled oats",
-        "100g Brown sugar",
-        "115g Unsalted butter, cold and cubed",
-        "1/2 tsp Ground cinnamon",
-        "Pinch Sea salt"
+      dressing: [
+        "2 tbsp Tahini",
+        "1 tbsp Lemon juice",
+        "1 tsp Maple syrup"
       ]
     },
     chefNotes: [
-      "Use a mix of tart and sweet apple varieties for the best balance of flavor.",
-      "Keep the butter cold when making the crumble topping — this is what creates those craggy, crisp clusters."
+      "Roast the sweet potatoes ahead of time to make assembling this salad a breeze."
     ],
-    nutrition: { calories: 360, protein: "4g", carbs: "54g", fat: "15g" },
+    nutrition: { calories: 420, protein: "12g", carbs: "55g", fat: "18g" },
     steps: [
-      { stepNumber: 1, title: "Prepare the Filling", image: "/images/recipes/crumble-step1.jpg", description: "Toss the sliced apples with lemon juice, brown sugar, cinnamon, and flour. Spread evenly into a baking dish." },
-      { stepNumber: 2, title: "Make the Crumble Topping", image: "/images/recipes/crumble-step2.jpg", description: "Combine flour, oats, brown sugar, cinnamon, and salt. Rub in the cold butter with your fingers until coarse, clumpy crumbs form." },
-      { stepNumber: 3, title: "Assemble", image: "/images/recipes/crumble-step3.jpg", description: "Sprinkle the crumble topping evenly over the apple filling." },
-      { stepNumber: 4, title: "Bake and Serve", image: "/images/recipes/crumble-step4.jpg", description: "Bake at 190°C (375°F) for 30–35 minutes until the top is golden and the filling is bubbling. Serve warm, ideally with vanilla ice cream." }
+      { stepNumber: 1, title: "Assemble", description: "Place greens in a bowl and top with quinoa and roasted sweet potatoes." },
+      { stepNumber: 2, title: "Dress", description: "Whisk dressing ingredients and drizzle over the salad. Top with seeds." }
     ],
-    tags: ["Dessert", "Baked", "Comfort Food", "Fall"]
+    tags: ["Lunch", "Vegan", "Healthy"]
   },
   {
-    id: 23,
-    categoryId: 4,
-    title: "Classic Crème Brûlée",
-    category: "Dessert",
-    description: "Silky vanilla custard topped with a crackling layer of caramelized sugar. An elegant French dessert that's simpler to make than it looks, with a satisfying contrast of textures.",
-    prepTime: "15m (plus chilling)",
-    cookTime: "40m",
-    servings: 4,
-    difficulty: "Intermediate",
-    heroImage: "/images/recipes/creme-brulee.jpg",
-    ingredients: {
-      main: [
-        "500ml Heavy cream",
-        "1 Vanilla bean (or 1 tbsp vanilla extract)",
-        "5 Large egg yolks",
-        "100g Granulated sugar, plus extra for topping"
-      ]
-    },
-    chefNotes: [
-      "Strain the custard mixture through a fine sieve before baking for an ultra-smooth texture.",
-      "Use a kitchen torch for the best caramelized sugar crust — it gives more control than a broiler."
-    ],
-    nutrition: { calories: 380, protein: "6g", carbs: "24g", fat: "29g" },
-    steps: [
-      { stepNumber: 1, title: "Infuse the Cream", image: "/images/recipes/brulee-step1.jpg", description: "Heat the cream with the split vanilla bean until just simmering. Remove from heat and let steep for 10 minutes." },
-      { stepNumber: 2, title: "Make the Custard", image: "/images/recipes/brulee-step2.jpg", description: "Whisk egg yolks and sugar together. Slowly pour in the warm cream while whisking constantly to temper the eggs." },
-      { stepNumber: 3, title: "Bake in a Water Bath", image: "/images/recipes/brulee-step3.jpg", description: "Strain the custard into ramekins, place in a water bath, and bake at 150°C (300°F) for 35–40 minutes until just set but still wobbly in the center." },
-      { stepNumber: 4, title: "Chill and Caramelize", image: "/images/recipes/brulee-step4.jpg", description: "Chill the custards for at least 4 hours. Just before serving, sprinkle a thin layer of sugar over each and caramelize with a kitchen torch until crisp and golden." }
-    ],
-    tags: ["Dessert", "French", "Make-Ahead", "Elegant"]
-  },
-  {
-    id: 24,
-    categoryId: 4,
-    title: "Chewy Chocolate Chip Cookies",
-    category: "Dessert",
-    description: "Thick, chewy cookies with crisp edges, gooey centers, and pockets of melted chocolate. A timeless classic that's perfect with a glass of milk or as an after-dinner treat.",
-    prepTime: "15m (plus chilling)",
+    id: 103,
+    categoryId: 3,
+    title: "Pan-Seared Garlic Butter Salmon",
+    category: "Dinner",
+    description: "Perfectly crispy-skinned salmon fillets bathed in a rich garlic butter sauce with a hint of fresh lemon and parsley.",
+    prepTime: "5m",
     cookTime: "12m",
-    servings: 18,
-    difficulty: "Easy",
-    heroImage: "/images/recipes/chocolate-chip-cookies.jpg",
+    servings: 2,
+    difficulty: "Intermediate",
+    heroImage: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=1200&q=80",
     ingredients: {
       main: [
-        "280g All-purpose flour",
-        "1 tsp Baking soda",
-        "1/2 tsp Fine sea salt",
-        "225g Unsalted butter, softened",
-        "150g Brown sugar",
-        "100g Granulated sugar",
-        "2 Large eggs",
-        "2 tsp Vanilla extract",
-        "300g Chocolate chips"
+        "2 Salmon fillets (skin-on)",
+        "Salt and pepper to taste",
+        "2 tbsp Olive oil"
+      ],
+      sauce: [
+        "3 tbsp Butter",
+        "3 Garlic cloves, minced",
+        "1 tbsp Fresh lemon juice",
+        "1 tbsp Parsley, chopped"
       ]
     },
     chefNotes: [
-      "Chill the dough for at least 30 minutes — this prevents excessive spreading and deepens the flavor.",
-      "Slightly underbake the cookies and let them finish setting on the baking sheet for that perfect chewy center."
+      "Pat the salmon skin completely dry before cooking to ensure maximum crispiness."
     ],
-    nutrition: { calories: 240, protein: "3g", carbs: "30g", fat: "12g" },
+    nutrition: { calories: 510, protein: "34g", carbs: "2g", fat: "38g" },
     steps: [
-      { stepNumber: 1, title: "Cream Butter and Sugar", image: "/images/recipes/cookies-step1.jpg", description: "Beat butter, brown sugar, and granulated sugar together until light and fluffy, about 3 minutes." },
-      { stepNumber: 2, title: "Add Eggs and Dry Ingredients", image: "/images/recipes/cookies-step2.jpg", description: "Beat in eggs and vanilla, then gradually mix in flour, baking soda, and salt until just combined. Fold in chocolate chips." },
-      { stepNumber: 3, title: "Chill the Dough", image: "/images/recipes/cookies-step3.jpg", description: "Cover the dough and refrigerate for at least 30 minutes, or up to 24 hours." },
-      { stepNumber: 4, title: "Bake", image: "/images/recipes/cookies-step4.jpg", description: "Scoop dough into balls onto a lined baking sheet and bake at 190°C (375°F) for 10–12 minutes until edges are golden but centers still look slightly soft." }
+      { stepNumber: 1, title: "Sear", description: "Season salmon. Heat oil in a pan and sear skin-side down for 6 mins." },
+      { stepNumber: 2, title: "Baste", description: "Flip salmon, add butter, garlic, and lemon juice. Baste salmon with the sauce until cooked." }
     ],
-    tags: ["Dessert", "Baked", "Classic", "Crowd-Pleaser"]
+    tags: ["Dinner", "Seafood", "Low-Carb"]
   }
-
 ];
 
 export default recipes;

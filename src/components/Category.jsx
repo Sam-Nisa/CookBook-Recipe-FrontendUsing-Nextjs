@@ -5,7 +5,7 @@ import categories from "../data/categories";
 export default function Category() {
     return (  
     <div className="">
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <section className="max-w-7xl mx-auto px-8 sm:px-6 lg:px-1 py-12 md:py-16">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
           <div>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#3C3224] tracking-tight">

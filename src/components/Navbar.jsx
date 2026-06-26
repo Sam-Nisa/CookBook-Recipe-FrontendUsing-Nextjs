@@ -2,12 +2,13 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { useFavorites } from "../app/context/FavoritesContext";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const router = useRouter();
   const pathname = usePathname();
   const { favorites } = useFavorites();
 
@@ -25,7 +26,8 @@ export default function Navbar() {
   const handleSearchSubmit = (e) => {  
     e.preventDefault();
     if (searchQuery.trim()) {
-      console.log("Searching for:", searchQuery);
+      router.push(`/recipes?search=${encodeURIComponent(searchQuery.trim())}`);
+      setIsOpen(false);
     }
   };
 
