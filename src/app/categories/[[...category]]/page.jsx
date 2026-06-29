@@ -36,16 +36,12 @@ const categoryMap = {
   }
 };
 
-type PageProps = {
-  params: Promise<{ category?: string[] }>;
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
-};
 
-export default function CategoriesPage({ params, searchParams }: PageProps) {
+export default function CategoriesPage({ params, searchParams }) {
   const resolvedParams = use(params);
   const categoryParam = resolvedParams.category?.[0]?.toLowerCase() || "breakfast";
 
-  const categoryDetails = categoryMap[categoryParam as keyof typeof categoryMap] || categoryMap.breakfast;
+  const categoryDetails = categoryMap[categoryParam] || categoryMap.breakfast;
 
   // State for active filter tag
   const [activeFilter, setActiveFilter] = useState("All Recipes");
@@ -86,7 +82,7 @@ export default function CategoriesPage({ params, searchParams }: PageProps) {
           return proteinVal >= 20 || recipe.tags?.some(t => t.toLowerCase().includes("protein"));
         }
         if (activeFilter === "Under 30 Mins") {
-          const parseTime = (timeStr: string | undefined) => {
+          const parseTime = (timeStr) => {
             if (!timeStr) return 0;
             return parseInt(timeStr) || 0;
           };
@@ -109,7 +105,7 @@ export default function CategoriesPage({ params, searchParams }: PageProps) {
     } else if (sortBy === "Oldest First") {
       list.sort((a, b) => a.id - b.id);
     } else if (sortBy === "Prep Time (Low to High)") {
-      const parseTime = (timeStr: string | undefined) => {
+      const parseTime = (timeStr) => {
         if (!timeStr) return 999;
         return parseInt(timeStr) || 999;
       };

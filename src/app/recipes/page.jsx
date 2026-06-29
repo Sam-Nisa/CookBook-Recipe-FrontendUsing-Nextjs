@@ -6,19 +6,16 @@ import { useRouter } from "next/navigation";
 import FeaturedRecipeCard from "../../components/FeaturedRecipeCard";
 import recipes from "../../data/recipes";
 
-type SearchProps = {
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
-};
 
-export default function RecipesPage({ searchParams }: SearchProps) {
+export default function RecipesPage({ searchParams }) {
   const router = useRouter();
   const resolvedSearchParams = use(searchParams);
-  const searchQuery = (resolvedSearchParams.search as string) || "";
+  const searchQuery = (resolvedSearchParams.search) || "";
 
   // Checkbox filters states
-  const [selectedDifficulty, setSelectedDifficulty] = useState<string[]>([]);
-  const [selectedTime, setSelectedTime] = useState<string[]>([]);
-  const [selectedDietary, setSelectedDietary] = useState<string[]>([]);
+  const [selectedDifficulty, setSelectedDifficulty] = useState([]);
+  const [selectedTime, setSelectedTime] = useState([]);
+  const [selectedDietary, setSelectedDietary] = useState([]);
 
   // Pagination state
   const [currentPage, setCurrentPage] = useState(1);
@@ -30,7 +27,7 @@ export default function RecipesPage({ searchParams }: SearchProps) {
   }, [searchQuery, selectedDifficulty, selectedTime, selectedDietary]);
 
   // Helper to parse time strings like "10m", "1h 10m", "15m Prep"
-  const parseTime = (timeStr: string | undefined): number => {
+  const parseTime = (timeStr) => {
     if (!timeStr) return 0;
     // Extract first number and potential 'h' or 'm' unit
     const match = timeStr.match(/(\d+)\s*(h|m|min)?/i);
@@ -48,7 +45,7 @@ export default function RecipesPage({ searchParams }: SearchProps) {
   };
 
   // Helper to check dietary tags
-  const matchesDietary = (recipe: typeof recipes[0], option: string): boolean => {
+  const matchesDietary = (recipe, option) => {
     const lowerTags = recipe.tags?.map(t => t.toLowerCase()) || [];
     const desc = recipe.description?.toLowerCase() || "";
     
@@ -65,7 +62,7 @@ export default function RecipesPage({ searchParams }: SearchProps) {
   };
 
   // Helper to check cook time options
-  const matchesTime = (recipe: typeof recipes[0], option: string): boolean => {
+  const matchesTime = (recipe, option) => {
     const totalTime = parseTime(recipe.prepTime) + parseTime(recipe.cookTime);
     if (option === "< 15 mins") {
       return totalTime < 15;
@@ -130,19 +127,19 @@ export default function RecipesPage({ searchParams }: SearchProps) {
 
   const totalPages = Math.ceil(filteredRecipes.length / itemsPerPage);
 
-  const handleDifficultyChange = (difficulty: string) => {
+  const handleDifficultyChange = (difficulty) => {
     setSelectedDifficulty(prev =>
       prev.includes(difficulty) ? prev.filter(d => d !== difficulty) : [...prev, difficulty]
     );
   };
 
-  const handleTimeChange = (time: string) => {
+  const handleTimeChange = (time) => {
     setSelectedTime(prev =>
       prev.includes(time) ? prev.filter(t => t !== time) : [...prev, time]
     );
   };
 
-  const handleDietaryChange = (dietary: string) => {
+  const handleDietaryChange = (dietary) => {
     setSelectedDietary(prev =>
       prev.includes(dietary) ? prev.filter(d => d !== dietary) : [...prev, dietary]
     );

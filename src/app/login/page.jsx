@@ -12,7 +12,7 @@ export default function LoginPage() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {  
     e.preventDefault();
     setError("");
     setLoading(true);
@@ -34,7 +34,7 @@ export default function LoginPage() {
       await new Promise((resolve) => setTimeout(resolve, 1500));
       console.log("Login Success:", { email });
       router.push("/");
-    } catch (err: any) {
+    } catch (err) {
       setError("Invalid email or password. Please try again.");
     } finally {
       setLoading(false);

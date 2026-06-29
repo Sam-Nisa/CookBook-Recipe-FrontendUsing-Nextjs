@@ -15,7 +15,7 @@ export default function RegisterPage() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
     setLoading(true);
@@ -55,7 +55,7 @@ export default function RegisterPage() {
       await new Promise((resolve) => setTimeout(resolve, 1500));
       console.log("Registration Success:", { name, email });
       router.push("/");
-    } catch (err: any) {
+    } catch (err) {
       setError("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
